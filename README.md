@@ -2,7 +2,7 @@
 
 A developer-focused performance analyzer built with **React + JavaScript** that inspects JavaScript and Java code to detect performance bottlenecks, estimate time complexity, and provide actionable optimization hints.
 
-🌐 **Live Demo**: https://your-vercel-link.vercel.app
+🌐 **Live Demo**: https://code-performance-analyzer.vercel.app/
 
 ---
 
