@@ -1,16 +1,79 @@
-# React + Vite
+# 🚀 Why Your Code Is Slow
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A developer-focused performance analyzer built with **React + JavaScript** that inspects JavaScript and Java code to detect performance bottlenecks, estimate time complexity, and provide actionable optimization hints.
 
-Currently, two official plugins are available:
+🌐 **Live Demo**: https://your-vercel-link.vercel.app
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🧠 What This Tool Does
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+This tool helps developers understand **why their code may be slow** by analyzing common algorithmic patterns such as:
 
-## Expanding the ESLint configuration
+- Nested loops
+- Recursion
+- Costly lookup operations inside loops
+- Deep nesting and repeated work
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+It estimates **time complexity** using heuristic analysis and explains performance issues in a **human-readable** way.
+
+---
+
+## ✨ Features
+
+- 🔍 Detects nested loops and loop depth
+- 🧬 Identifies recursion and flags potential exponential behavior
+- ⚠️ Warns about costly operations like `includes()`, `indexOf()`, `find()`
+- 📊 Estimates time complexity: `O(1)` → `O(n³)` and beyond
+- 💡 Provides contextual optimization tips
+- 🌗 Dark, developer-friendly UI inspired by modern code editors
+- 🌐 Fully client-side (no backend)
+
+---
+
+## 🛠️ Tech Stack
+
+- **React**
+- **JavaScript**
+- **Vite**
+- **HTML & CSS (inline styling)**
+
+---
+
+## ⚙️ How It Works
+
+The analyzer uses **pattern-based heuristic analysis**, not compiler-level parsing.
+
+Key ideas:
+- Loop nesting depth → time complexity estimation
+- Function self-calls → recursion detection
+- Costly operations inside loops → performance warnings
+- Additive vs nested loops handled separately
+
+This approach keeps the tool **fast, explainable, and beginner-friendly**.
+
+---
+
+## 🧪 Supported Languages
+
+- ✅ JavaScript (primary support)
+- ⚠️ Java (heuristic support based on syntax patterns)
+
+> Note: Since this is a static analyzer, results are best-effort estimates and may not match exact runtime behavior in all cases.
+
+---
+
+## 🎯 Why I Built This
+
+To bridge the gap between **DSA theory** and **real-world code performance**.
+
+Most beginners know Big-O notation but struggle to see how it applies to actual code. This project visualizes those concepts in a practical, interactive way.
+
+---
+
+## 🚀 Getting Started Locally
+
+```bash
+npm install
+npm run dev
+
